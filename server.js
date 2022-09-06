@@ -14,13 +14,13 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.status(200).send('Home Page')
-})
+    res.status(200).send('Welcome to Home Page. Copy this link: <h1>https://odat-express-middleware.herokuapp.com/square?num=5</h1> and paste it in the URL placeholder')
+  
+})  
 
 app.get('/square', squareCheck(), (req, res) => {
     
-    const squaredNumber = req.num;
-    res.status(200).send(squaredNumber)
+    console.log('ولا غالب إلا الله')
 })
 
 
