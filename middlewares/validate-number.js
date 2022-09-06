@@ -1,11 +1,12 @@
 'use strict'
 
-module.exports = (num) => {
+module.exports = () => {
     return (req, res, next) => {
-        if (typeof num == 'number') {
+        let num = req.query.num;
+         num = JSON.parse(num)
+        if (typeof num === 'number') {
            let squaredNum = num * num;
             res.json({Squared_Number: squaredNum})
-            // req.square = num*num;
             next()
         }
     else {
@@ -15,5 +16,4 @@ module.exports = (num) => {
 }
 
 }
-
 

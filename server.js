@@ -17,11 +17,10 @@ app.get('/', (req, res) => {
     res.status(200).send('Home Page')
 })
 
-app.get('/square', squareCheck(2), (req, res) => {
+app.get('/square', squareCheck(), (req, res) => {
     
-    const squaredNumber = req.square;
-    
-    res.send(squaredNumber)
+    const squaredNumber = req.num;
+    res.status(200).send(squaredNumber)
 })
 
 

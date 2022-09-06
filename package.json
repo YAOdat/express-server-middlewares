@@ -6,7 +6,9 @@
     "nodemon": "^2.0.19"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest --coverage --verbose"
+
   },
   "name": "express-server-middlewares",
   "description": "",
